@@ -489,3 +489,18 @@ KeyboardInterrupt
 [0m13:53:30.286245 [debug] [MainThread]: Databricks adapter: Connection(session-id=5e22d2a5-3fa2-44e8-bf45-e2759f6d1860) - Closing connection
 [0m13:53:30.698939 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x104ce1190>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1316eaca0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x13174d130>]}
 [0m13:53:30.702633 [debug] [MainThread]: Flushing usage events
+[0m17:09:24.314585 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106612460>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1080fcb20>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10813b370>]}
+
+
+============================== 17:09:24.317531 | 9c0fe9d4-45cf-483f-b026-5c8ef8384f42 ==============================
+[0m17:09:24.317531 [info ] [MainThread]: Running with dbt=1.7.14
+[0m17:09:24.317901 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'debug': 'False', 'version_check': 'True', 'log_path': 'logs', 'fail_fast': 'False', 'profiles_dir': '/Users/ssuphapinyo/.dbt', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'introspect': 'True', 'invocation_command': 'dbt snapshot', 'static_parser': 'True', 'target_path': 'None', 'log_format': 'default', 'send_anonymous_usage_stats': 'True'}
+[0m17:09:24.318280 [error] [MainThread]: Encountered an error:
+Runtime Error
+  No dbt_project.yml found at expected path /Users/ssuphapinyo/Code/Medallion-Spark-Azure-DBT/dbt_project.yml
+  Verify that each entry within packages.yml (and their transitive dependencies) contains a file named dbt_project.yml
+  
+[0m17:09:24.340531 [debug] [MainThread]: Resource report: {"command_name": "snapshot", "command_wall_clock_time": 0.06403746, "process_user_time": 1.065506, "process_kernel_time": 0.108644, "process_mem_max_rss": "95059968", "command_success": false, "process_in_blocks": "0", "process_out_blocks": "0"}
+[0m17:09:24.341062 [debug] [MainThread]: Command `dbt snapshot` failed at 17:09:24.340953 after 0.06 seconds
+[0m17:09:24.341353 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106612460>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10812e3a0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x108142190>]}
+[0m17:09:24.341627 [debug] [MainThread]: Flushing usage events
