@@ -1,0 +1,491 @@
+[0m01:52:43.419330 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x104bf14f0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1206f79a0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x12073e7f0>]}
+
+
+============================== 01:52:43.422740 | 75b365f8-8111-4549-8d05-593d4a1767fe ==============================
+[0m01:52:43.422740 [info ] [MainThread]: Running with dbt=1.7.14
+[0m01:52:43.423099 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'fail_fast': 'False', 'profiles_dir': '/Users/ssuphapinyo/.dbt', 'log_path': 'logs', 'debug': 'False', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'introspect': 'True', 'log_format': 'default', 'static_parser': 'True', 'target_path': 'None', 'invocation_command': 'dbt init', 'send_anonymous_usage_stats': 'True'}
+[0m01:52:43.423457 [warn ] [MainThread]: [ConfigFolderDirectory]: Unable to parse dict {'dir': PosixPath('/Users/ssuphapinyo/.dbt')}
+[0m01:52:43.423668 [info ] [MainThread]: Creating dbt configuration folder at 
+[0m01:53:22.818897 [debug] [MainThread]: Starter project path: /Users/ssuphapinyo/Code/Medallion-Spark-Azure-DBT/.venv/lib/python3.9/site-packages/dbt/include/starter_project
+[0m01:53:22.828328 [info ] [MainThread]: 
+Your new dbt project "medallion_dbt_spark" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m01:53:22.829149 [info ] [MainThread]: Setting up your profile.
+[0m01:54:37.766090 [error] [MainThread]: Encountered an error:
+
+[0m01:54:37.782286 [error] [MainThread]: Traceback (most recent call last):
+  File "/Users/ssuphapinyo/Code/Medallion-Spark-Azure-DBT/.venv/lib/python3.9/site-packages/dbt/cli/requires.py", line 91, in wrapper
+    result, success = func(*args, **kwargs)
+  File "/Users/ssuphapinyo/Code/Medallion-Spark-Azure-DBT/.venv/lib/python3.9/site-packages/dbt/cli/requires.py", line 76, in wrapper
+    return func(*args, **kwargs)
+  File "/Users/ssuphapinyo/Code/Medallion-Spark-Azure-DBT/.venv/lib/python3.9/site-packages/dbt/cli/main.py", line 515, in init
+    results = task.run()
+  File "/Users/ssuphapinyo/Code/Medallion-Spark-Azure-DBT/.venv/lib/python3.9/site-packages/dbt/task/init.py", line 344, in run
+    self.setup_profile(profile_name)
+  File "/Users/ssuphapinyo/Code/Medallion-Spark-Azure-DBT/.venv/lib/python3.9/site-packages/dbt/task/init.py", line 264, in setup_profile
+    self.create_profile_from_target(adapter, profile_name=profile_name)
+  File "/Users/ssuphapinyo/Code/Medallion-Spark-Azure-DBT/.venv/lib/python3.9/site-packages/dbt/task/init.py", line 181, in create_profile_from_target
+    self.create_profile_from_profile_template(profile_template, profile_name)
+  File "/Users/ssuphapinyo/Code/Medallion-Spark-Azure-DBT/.venv/lib/python3.9/site-packages/dbt/task/init.py", line 165, in create_profile_from_profile_template
+    target = self.generate_target_from_input(prompts, initial_target)
+  File "/Users/ssuphapinyo/Code/Medallion-Spark-Azure-DBT/.venv/lib/python3.9/site-packages/dbt/task/init.py", line 115, in generate_target_from_input
+    numeric_choice = click.prompt(prompt_msg, type=click.INT)
+  File "/Users/ssuphapinyo/Code/Medallion-Spark-Azure-DBT/.venv/lib/python3.9/site-packages/click/termui.py", line 164, in prompt
+    value = prompt_func(prompt)
+  File "/Users/ssuphapinyo/Code/Medallion-Spark-Azure-DBT/.venv/lib/python3.9/site-packages/click/termui.py", line 147, in prompt_func
+    raise Abort() from None
+click.exceptions.Abort
+
+[0m01:54:37.814136 [debug] [MainThread]: Resource report: {"command_name": "init", "command_wall_clock_time": 114.434456, "process_user_time": 3.689133, "process_kernel_time": 0.963234, "process_mem_max_rss": "171180032", "command_success": false, "process_in_blocks": "0", "process_out_blocks": "0"}
+[0m01:54:37.814969 [debug] [MainThread]: Command `dbt init` failed at 01:54:37.814776 after 114.44 seconds
+[0m01:54:37.815464 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x104bf14f0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x137b865b0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x137b86a60>]}
+[0m01:54:37.815941 [debug] [MainThread]: Flushing usage events
+[0m01:54:54.847321 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1027f51f0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1042d31c0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x104327970>]}
+
+
+============================== 01:54:54.849814 | e209eb84-2f20-4235-ac5e-362456a08b95 ==============================
+[0m01:54:54.849814 [info ] [MainThread]: Running with dbt=1.7.14
+[0m01:54:54.850173 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/Users/ssuphapinyo/.dbt', 'debug': 'False', 'warn_error': 'None', 'log_path': 'logs', 'fail_fast': 'False', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'introspect': 'True', 'invocation_command': 'dbt init', 'static_parser': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'send_anonymous_usage_stats': 'True'}
+[0m01:55:02.437417 [info ] [MainThread]: A project called medallion_dbt_spark already exists here.
+[0m01:55:02.443035 [debug] [MainThread]: Resource report: {"command_name": "init", "command_success": true, "command_wall_clock_time": 7.6273413, "process_user_time": 1.078135, "process_kernel_time": 0.093841, "process_mem_max_rss": "94519296", "process_in_blocks": "0", "process_out_blocks": "0"}
+[0m01:55:02.444504 [debug] [MainThread]: Command `dbt init` succeeded at 01:55:02.444216 after 7.63 seconds
+[0m01:55:02.445241 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1027f51f0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1042c2f70>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10432e8b0>]}
+[0m01:55:02.445914 [debug] [MainThread]: Flushing usage events
+[0m01:55:51.966244 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1035f11f0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1053e31c0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x105437970>]}
+
+
+============================== 01:55:51.968731 | ff26f8e5-4ff8-4081-af6e-0af6cd5604fb ==============================
+[0m01:55:51.968731 [info ] [MainThread]: Running with dbt=1.7.14
+[0m01:55:51.969069 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'debug': 'False', 'fail_fast': 'False', 'log_path': 'logs', 'version_check': 'True', 'profiles_dir': '/Users/ssuphapinyo/.dbt', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'introspect': 'True', 'log_format': 'default', 'target_path': 'None', 'invocation_command': 'dbt init medallion_dbt_Spark', 'send_anonymous_usage_stats': 'True'}
+[0m01:55:51.969789 [info ] [MainThread]: A project called medallion_dbt_Spark already exists here.
+[0m01:55:51.970752 [debug] [MainThread]: Resource report: {"command_name": "init", "command_success": true, "command_wall_clock_time": 0.035842624, "process_user_time": 1.062701, "process_kernel_time": 0.093599, "process_mem_max_rss": "95240192", "process_in_blocks": "0", "process_out_blocks": "0"}
+[0m01:55:51.971137 [debug] [MainThread]: Command `dbt init` succeeded at 01:55:51.971049 after 0.04 seconds
+[0m01:55:51.971356 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1035f11f0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1053d2f70>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10543a8b0>]}
+[0m01:55:51.971577 [debug] [MainThread]: Flushing usage events
+[0m01:56:02.297268 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x104c79190>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106757b50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1067ab580>]}
+
+
+============================== 01:56:02.299746 | 3a37be77-3f5d-4659-9237-5b673a7d25cb ==============================
+[0m01:56:02.299746 [info ] [MainThread]: Running with dbt=1.7.14
+[0m01:56:02.300107 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'debug': 'False', 'version_check': 'True', 'log_path': 'logs', 'fail_fast': 'False', 'profiles_dir': '/Users/ssuphapinyo/.dbt', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'invocation_command': 'dbt init medallion_dbt_spark_demo', 'introspect': 'True', 'log_format': 'default', 'target_path': 'None', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m01:56:02.300710 [debug] [MainThread]: Starter project path: /Users/ssuphapinyo/Code/Medallion-Spark-Azure-DBT/.venv/lib/python3.9/site-packages/dbt/include/starter_project
+[0m01:56:02.306344 [info ] [MainThread]: 
+Your new dbt project "medallion_dbt_spark_demo" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m01:56:02.306597 [info ] [MainThread]: Setting up your profile.
+[0m01:58:53.157155 [info ] [MainThread]: Profile medallion_dbt_spark_demo written to /Users/ssuphapinyo/.dbt/profiles.yml using target's profile_template.yml and your supplied values. Run 'dbt debug' to validate the connection.
+[0m01:58:53.163214 [debug] [MainThread]: Resource report: {"command_name": "init", "command_success": true, "command_wall_clock_time": 170.89789, "process_user_time": 2.153758, "process_kernel_time": 2.060783, "process_mem_max_rss": "176979968", "process_in_blocks": "0", "process_out_blocks": "0"}
+[0m01:58:53.164772 [debug] [MainThread]: Command `dbt init` succeeded at 01:58:53.164451 after 170.90 seconds
+[0m01:58:53.165712 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x104c79190>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1067a0790>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106757b50>]}
+[0m01:58:53.166603 [debug] [MainThread]: Flushing usage events
+[0m01:59:26.667209 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1030711f0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10671f1f0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106773970>]}
+
+
+============================== 01:59:26.670401 | 3beb04de-05fc-4779-8dae-4378179fb79f ==============================
+[0m01:59:26.670401 [info ] [MainThread]: Running with dbt=1.7.14
+[0m01:59:26.670774 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/Users/ssuphapinyo/.dbt', 'fail_fast': 'False', 'warn_error': 'None', 'log_path': 'logs', 'version_check': 'True', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'invocation_command': 'dbt debug', 'static_parser': 'True', 'introspect': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'send_anonymous_usage_stats': 'True'}
+[0m01:59:26.671163 [info ] [MainThread]: dbt version: 1.7.14
+[0m01:59:26.671367 [info ] [MainThread]: python version: 3.9.6
+[0m01:59:26.671558 [info ] [MainThread]: python path: /Users/ssuphapinyo/Code/Medallion-Spark-Azure-DBT/.venv/bin/python
+[0m01:59:26.671748 [info ] [MainThread]: os info: macOS-14.5-arm64-arm-64bit
+[0m01:59:27.613677 [info ] [MainThread]: Using profiles dir at /Users/ssuphapinyo/.dbt
+[0m01:59:27.614040 [info ] [MainThread]: Using profiles.yml file at /Users/ssuphapinyo/.dbt/profiles.yml
+[0m01:59:27.614273 [info ] [MainThread]: Using dbt_project.yml file at /Users/ssuphapinyo/Code/Medallion-Spark-Azure-DBT/dbt_project.yml
+[0m01:59:27.614494 [info ] [MainThread]: adapter type: databricks
+[0m01:59:27.614693 [info ] [MainThread]: adapter version: 1.7.15
+[0m01:59:27.614901 [info ] [MainThread]: Configuration:
+[0m01:59:27.615095 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m01:59:27.615289 [info ] [MainThread]:   dbt_project.yml file [[31mERROR not found[0m]
+[0m01:59:27.615477 [info ] [MainThread]: Required dependencies:
+[0m01:59:27.615851 [debug] [MainThread]: Executing "git --help"
+[0m01:59:27.636593 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]\n           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]\n           [--super-prefix=<path>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone     Clone a repository into a new directory\n   init      Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add       Add file contents to the index\n   mv        Move or rename a file, a directory, or a symlink\n   restore   Restore working tree files\n   rm        Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect    Use binary search to find the commit that introduced a bug\n   diff      Show changes between commits, commit and working tree, etc\n   grep      Print lines matching a pattern\n   log       Show commit logs\n   show      Show various types of objects\n   status    Show the working tree status\n\ngrow, mark and tweak your common history\n   branch    List, create, or delete branches\n   commit    Record changes to the repository\n   merge     Join two or more development histories together\n   rebase    Reapply commits on top of another base tip\n   reset     Reset current HEAD to the specified state\n   switch    Switch branches\n   tag       Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch     Download objects and refs from another repository\n   pull      Fetch from and integrate with another repository or a local branch\n   push      Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m01:59:27.637199 [debug] [MainThread]: STDERR: "b''"
+[0m01:59:27.637529 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m01:59:27.637785 [info ] [MainThread]: Connection:
+[0m01:59:27.638035 [info ] [MainThread]:   host: https://adb-2904831403393108.8.azuredatabricks.net
+[0m01:59:27.638229 [info ] [MainThread]:   http_path: sql/protocolv1/o/2904831403393108/0519-112838-epy3ulok
+[0m01:59:27.638414 [info ] [MainThread]:   catalog: hive_metastore
+[0m01:59:27.638603 [info ] [MainThread]:   schema: saleslt
+[0m01:59:27.639216 [info ] [MainThread]: Registered adapter: databricks=1.7.15
+[0m01:59:27.671514 [debug] [MainThread]: Databricks adapter: DatabricksDBTConnection(id=5083053312, session-id=None, name=debug, idle-time=0s, acquire-count=0, language=None, thread-identifier=(61171, 8509787136), compute-name=) - Creating connection
+[0m01:59:27.672065 [debug] [MainThread]: Acquiring new databricks connection 'debug'
+[0m01:59:27.672314 [debug] [MainThread]: Databricks adapter: DatabricksDBTConnection(id=5083053312, session-id=None, name=debug, idle-time=2.1457672119140625e-06s, acquire-count=1, language=None, thread-identifier=(61171, 8509787136), compute-name=) - Acquired connection on thread (61171, 8509787136), using default compute resource
+[0m01:59:27.672579 [debug] [MainThread]: Databricks adapter: DatabricksDBTConnection(id=5083053312, session-id=None, name=debug, idle-time=0.0002880096435546875s, acquire-count=1, language=None, thread-identifier=(61171, 8509787136), compute-name=) - Checking idleness
+[0m01:59:27.672786 [debug] [MainThread]: Databricks adapter: DatabricksDBTConnection(id=5083053312, session-id=None, name=debug, idle-time=0.0004980564117431641s, acquire-count=1, language=None, thread-identifier=(61171, 8509787136), compute-name=) - Retrieving connection
+[0m01:59:27.672981 [debug] [MainThread]: Using databricks connection "debug"
+[0m01:59:27.673172 [debug] [MainThread]: On debug: select 1 as id
+[0m01:59:27.673380 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m01:59:27.796808 [debug] [MainThread]: Databricks adapter: Exception while trying to execute query
+select 1 as id
+: Database Error
+  HTTPSConnectionPool(host='https', port=None): Max retries exceeded with url: //adb-2904831403393108.8.azuredatabricks.net:443/sql/protocolv1/o/2904831403393108/0519-112838-epy3ulok (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x12f96a250>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known'))
+[0m01:59:27.797224 [debug] [MainThread]: Databricks adapter: DatabricksDBTConnection(id=5083053312, session-id=None, name=debug, idle-time=3.0994415283203125e-06s, acquire-count=0, language=None, thread-identifier=(61171, 8509787136), compute-name=) - Released connection
+[0m01:59:27.798167 [info ] [MainThread]:   Connection test: [[31mERROR[0m]
+
+[0m01:59:27.798431 [info ] [MainThread]: [31m2 checks failed:[0m
+[0m01:59:27.798642 [info ] [MainThread]: Project loading failed for the following reason:
+ project path </Users/ssuphapinyo/Code/Medallion-Spark-Azure-DBT/dbt_project.yml> not found
+
+[0m01:59:27.798850 [info ] [MainThread]: dbt was unable to connect to the specified database.
+The database returned the following error:
+
+  >Runtime Error
+  Database Error
+    HTTPSConnectionPool(host='https', port=None): Max retries exceeded with url: //adb-2904831403393108.8.azuredatabricks.net:443/sql/protocolv1/o/2904831403393108/0519-112838-epy3ulok (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x12f96a250>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known'))
+
+Check your database credentials and try again. For more information, visit:
+https://docs.getdbt.com/docs/configure-your-profile
+
+
+[0m01:59:27.801101 [debug] [MainThread]: Resource report: {"command_name": "debug", "command_wall_clock_time": 1.1711546, "process_user_time": 3.1466, "process_kernel_time": 0.917247, "process_mem_max_rss": "180469760", "command_success": false, "process_in_blocks": "0", "process_out_blocks": "0"}
+[0m01:59:27.801535 [debug] [MainThread]: Command `dbt debug` failed at 01:59:27.801430 after 1.17 seconds
+[0m01:59:27.801789 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m01:59:27.801987 [debug] [MainThread]: On debug: No close available on handle
+[0m01:59:27.802203 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1030711f0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x12ef93d00>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x12efacf40>]}
+[0m01:59:27.802459 [debug] [MainThread]: Flushing usage events
+[0m02:01:52.497335 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x105d318b0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x110123b50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x110177580>]}
+
+
+============================== 02:01:52.500357 | f5bc5d68-6b74-4d8f-9e3c-776b0e48dbde ==============================
+[0m02:01:52.500357 [info ] [MainThread]: Running with dbt=1.7.14
+[0m02:01:52.500748 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'fail_fast': 'False', 'version_check': 'True', 'log_path': 'logs', 'debug': 'False', 'profiles_dir': '/Users/ssuphapinyo/.dbt', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'introspect': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'target_path': 'None', 'invocation_command': 'dbt debug', 'send_anonymous_usage_stats': 'True'}
+[0m02:01:52.501166 [info ] [MainThread]: dbt version: 1.7.14
+[0m02:01:52.501378 [info ] [MainThread]: python version: 3.9.6
+[0m02:01:52.501576 [info ] [MainThread]: python path: /Users/ssuphapinyo/Code/Medallion-Spark-Azure-DBT/.venv/bin/python
+[0m02:01:52.501765 [info ] [MainThread]: os info: macOS-14.5-arm64-arm-64bit
+[0m02:01:53.488853 [info ] [MainThread]: Using profiles dir at /Users/ssuphapinyo/.dbt
+[0m02:01:53.489190 [info ] [MainThread]: Using profiles.yml file at /Users/ssuphapinyo/.dbt/profiles.yml
+[0m02:01:53.489405 [info ] [MainThread]: Using dbt_project.yml file at /Users/ssuphapinyo/Code/Medallion-Spark-Azure-DBT/dbt_project.yml
+[0m02:01:53.489604 [info ] [MainThread]: adapter type: databricks
+[0m02:01:53.489788 [info ] [MainThread]: adapter version: 1.7.15
+[0m02:01:53.489977 [info ] [MainThread]: Configuration:
+[0m02:01:53.490156 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m02:01:53.490333 [info ] [MainThread]:   dbt_project.yml file [[31mERROR not found[0m]
+[0m02:01:53.490506 [info ] [MainThread]: Required dependencies:
+[0m02:01:53.490726 [debug] [MainThread]: Executing "git --help"
+[0m02:01:53.511647 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]\n           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]\n           [--super-prefix=<path>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone     Clone a repository into a new directory\n   init      Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add       Add file contents to the index\n   mv        Move or rename a file, a directory, or a symlink\n   restore   Restore working tree files\n   rm        Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect    Use binary search to find the commit that introduced a bug\n   diff      Show changes between commits, commit and working tree, etc\n   grep      Print lines matching a pattern\n   log       Show commit logs\n   show      Show various types of objects\n   status    Show the working tree status\n\ngrow, mark and tweak your common history\n   branch    List, create, or delete branches\n   commit    Record changes to the repository\n   merge     Join two or more development histories together\n   rebase    Reapply commits on top of another base tip\n   reset     Reset current HEAD to the specified state\n   switch    Switch branches\n   tag       Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch     Download objects and refs from another repository\n   pull      Fetch from and integrate with another repository or a local branch\n   push      Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m02:01:53.512292 [debug] [MainThread]: STDERR: "b''"
+[0m02:01:53.512570 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m02:01:53.512823 [info ] [MainThread]: Connection:
+[0m02:01:53.513075 [info ] [MainThread]:   host: adb-2904831403393108.8.azuredatabricks.net
+[0m02:01:53.513267 [info ] [MainThread]:   http_path: sql/protocolv1/o/2904831403393108/0519-112838-epy3ulok
+[0m02:01:53.513453 [info ] [MainThread]:   catalog: hive_metastore
+[0m02:01:53.513636 [info ] [MainThread]:   schema: saleslt
+[0m02:01:53.513977 [info ] [MainThread]: Registered adapter: databricks=1.7.15
+[0m02:01:53.518759 [debug] [MainThread]: Databricks adapter: DatabricksDBTConnection(id=4881910848, session-id=None, name=debug, idle-time=0s, acquire-count=0, language=None, thread-identifier=(62788, 8509787136), compute-name=) - Creating connection
+[0m02:01:53.519351 [debug] [MainThread]: Acquiring new databricks connection 'debug'
+[0m02:01:53.519609 [debug] [MainThread]: Databricks adapter: DatabricksDBTConnection(id=4881910848, session-id=None, name=debug, idle-time=2.1457672119140625e-06s, acquire-count=1, language=None, thread-identifier=(62788, 8509787136), compute-name=) - Acquired connection on thread (62788, 8509787136), using default compute resource
+[0m02:01:53.519894 [debug] [MainThread]: Databricks adapter: DatabricksDBTConnection(id=4881910848, session-id=None, name=debug, idle-time=0.00029921531677246094s, acquire-count=1, language=None, thread-identifier=(62788, 8509787136), compute-name=) - Checking idleness
+[0m02:01:53.520116 [debug] [MainThread]: Databricks adapter: DatabricksDBTConnection(id=4881910848, session-id=None, name=debug, idle-time=0.0005240440368652344s, acquire-count=1, language=None, thread-identifier=(62788, 8509787136), compute-name=) - Retrieving connection
+[0m02:01:53.520324 [debug] [MainThread]: Using databricks connection "debug"
+[0m02:01:53.521084 [debug] [MainThread]: On debug: select 1 as id
+[0m02:01:53.521391 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m02:04:40.085367 [debug] [MainThread]: Databricks adapter: DatabricksDBTConnection(id=4881910848, session-id=None, name=debug, idle-time=6.699562072753906e-05s, acquire-count=0, language=None, thread-identifier=(62788, 8509787136), compute-name=) - Released connection
+[0m02:04:40.089185 [error] [MainThread]: Encountered an error:
+
+[0m02:04:40.139437 [error] [MainThread]: Traceback (most recent call last):
+  File "/Users/ssuphapinyo/Code/Medallion-Spark-Azure-DBT/.venv/lib/python3.9/site-packages/dbt/cli/requires.py", line 91, in wrapper
+    result, success = func(*args, **kwargs)
+  File "/Users/ssuphapinyo/Code/Medallion-Spark-Azure-DBT/.venv/lib/python3.9/site-packages/dbt/cli/requires.py", line 76, in wrapper
+    return func(*args, **kwargs)
+  File "/Users/ssuphapinyo/Code/Medallion-Spark-Azure-DBT/.venv/lib/python3.9/site-packages/dbt/cli/main.py", line 444, in debug
+    results = task.run()
+  File "/Users/ssuphapinyo/Code/Medallion-Spark-Azure-DBT/.venv/lib/python3.9/site-packages/dbt/task/debug.py", line 153, in run
+    connection_status = self.test_connection()
+  File "/Users/ssuphapinyo/Code/Medallion-Spark-Azure-DBT/.venv/lib/python3.9/site-packages/dbt/task/debug.py", line 472, in test_connection
+    connection_result = self.attempt_connection(self.profile)
+  File "/Users/ssuphapinyo/Code/Medallion-Spark-Azure-DBT/.venv/lib/python3.9/site-packages/dbt/task/debug.py", line 450, in attempt_connection
+    adapter.debug_query()
+  File "/Users/ssuphapinyo/Code/Medallion-Spark-Azure-DBT/.venv/lib/python3.9/site-packages/dbt/adapters/spark/impl.py", line 491, in debug_query
+    self.execute("select 1 as id")
+  File "/Users/ssuphapinyo/Code/Medallion-Spark-Azure-DBT/.venv/lib/python3.9/site-packages/dbt/adapters/databricks/utils.py", line 72, in wrapper
+    return func(*new_args, **new_kwargs)
+  File "/Users/ssuphapinyo/Code/Medallion-Spark-Azure-DBT/.venv/lib/python3.9/site-packages/dbt/adapters/databricks/impl.py", line 189, in execute
+    return super().execute(sql=sql, auto_begin=auto_begin, fetch=fetch, limit=limit)
+  File "/Users/ssuphapinyo/Code/Medallion-Spark-Azure-DBT/.venv/lib/python3.9/site-packages/dbt/adapters/base/impl.py", line 310, in execute
+    return self.connections.execute(sql=sql, auto_begin=auto_begin, fetch=fetch, limit=limit)
+  File "/Users/ssuphapinyo/Code/Medallion-Spark-Azure-DBT/.venv/lib/python3.9/site-packages/dbt/adapters/databricks/connections.py", line 1303, in execute
+    _, cursor = self.add_query(sql, auto_begin)
+  File "/Users/ssuphapinyo/Code/Medallion-Spark-Azure-DBT/.venv/lib/python3.9/site-packages/dbt/adapters/databricks/connections.py", line 1274, in add_query
+    cursor = cast(DatabricksSQLConnectionWrapper, connection.handle).cursor()
+  File "/Users/ssuphapinyo/Code/Medallion-Spark-Azure-DBT/.venv/lib/python3.9/site-packages/dbt/contracts/connection.py", line 90, in handle
+    self._handle.resolve(self)
+  File "/Users/ssuphapinyo/Code/Medallion-Spark-Azure-DBT/.venv/lib/python3.9/site-packages/dbt/contracts/connection.py", line 114, in resolve
+    return self.opener(connection)
+  File "/Users/ssuphapinyo/Code/Medallion-Spark-Azure-DBT/.venv/lib/python3.9/site-packages/dbt/adapters/databricks/connections.py", line 1538, in _open2
+    return cls.retry_connection(
+  File "/Users/ssuphapinyo/Code/Medallion-Spark-Azure-DBT/.venv/lib/python3.9/site-packages/dbt/adapters/base/connections.py", line 241, in retry_connection
+    connection.handle = connect()
+  File "/Users/ssuphapinyo/Code/Medallion-Spark-Azure-DBT/.venv/lib/python3.9/site-packages/dbt/adapters/databricks/connections.py", line 1502, in connect
+    conn: DatabricksSQLConnection = dbsql.connect(
+  File "/Users/ssuphapinyo/Code/Medallion-Spark-Azure-DBT/.venv/lib/python3.9/site-packages/databricks/sql/__init__.py", line 82, in connect
+    return Connection(server_hostname, http_path, access_token, **kwargs)
+  File "/Users/ssuphapinyo/Code/Medallion-Spark-Azure-DBT/.venv/lib/python3.9/site-packages/databricks/sql/client.py", line 195, in __init__
+    self._session_handle = self.thrift_backend.open_session(
+  File "/Users/ssuphapinyo/Code/Medallion-Spark-Azure-DBT/.venv/lib/python3.9/site-packages/databricks/sql/thrift_backend.py", line 559, in open_session
+    response = self.make_request(self._client.OpenSession, open_session_req)
+  File "/Users/ssuphapinyo/Code/Medallion-Spark-Azure-DBT/.venv/lib/python3.9/site-packages/databricks/sql/thrift_backend.py", line 488, in make_request
+    self._handle_request_error(error_info, attempt, elapsed)
+  File "/Users/ssuphapinyo/Code/Medallion-Spark-Azure-DBT/.venv/lib/python3.9/site-packages/databricks/sql/thrift_backend.py", line 321, in _handle_request_error
+    time.sleep(error_info.retry_delay)
+KeyboardInterrupt
+
+[0m02:04:40.142402 [debug] [MainThread]: Resource report: {"command_name": "debug", "command_wall_clock_time": 167.68199, "process_user_time": 3.499416, "process_kernel_time": 1.104583, "process_mem_max_rss": "180731904", "command_success": false, "process_in_blocks": "0", "process_out_blocks": "0"}
+[0m02:04:40.143057 [debug] [MainThread]: Command `dbt debug` failed at 02:04:40.142929 after 167.68 seconds
+[0m02:04:40.143394 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m02:04:40.143719 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x105d318b0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x122fc00d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x12301fc10>]}
+[0m02:04:40.144093 [debug] [MainThread]: Flushing usage events
+[0m02:04:45.402748 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x104ab54f0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106593a90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1065e7970>]}
+
+
+============================== 02:04:45.405379 | 58321a8f-eaf8-4601-bf53-77b593bb9bbe ==============================
+[0m02:04:45.405379 [info ] [MainThread]: Running with dbt=1.7.14
+[0m02:04:45.405758 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'debug': 'False', 'fail_fast': 'False', 'log_path': 'logs', 'profiles_dir': '/Users/ssuphapinyo/.dbt', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'introspect': 'True', 'static_parser': 'True', 'invocation_command': 'dbt debug', 'target_path': 'None', 'log_format': 'default', 'send_anonymous_usage_stats': 'True'}
+[0m02:04:45.406174 [info ] [MainThread]: dbt version: 1.7.14
+[0m02:04:45.406376 [info ] [MainThread]: python version: 3.9.6
+[0m02:04:45.406566 [info ] [MainThread]: python path: /Users/ssuphapinyo/Code/Medallion-Spark-Azure-DBT/.venv/bin/python
+[0m02:04:45.406756 [info ] [MainThread]: os info: macOS-14.5-arm64-arm-64bit
+[0m02:04:46.090154 [info ] [MainThread]: Using profiles dir at /Users/ssuphapinyo/.dbt
+[0m02:04:46.090531 [info ] [MainThread]: Using profiles.yml file at /Users/ssuphapinyo/.dbt/profiles.yml
+[0m02:04:46.090762 [info ] [MainThread]: Using dbt_project.yml file at /Users/ssuphapinyo/Code/Medallion-Spark-Azure-DBT/dbt_project.yml
+[0m02:04:46.090983 [info ] [MainThread]: adapter type: databricks
+[0m02:04:46.091195 [info ] [MainThread]: adapter version: 1.7.15
+[0m02:04:46.091400 [info ] [MainThread]: Configuration:
+[0m02:04:46.091590 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m02:04:46.091775 [info ] [MainThread]:   dbt_project.yml file [[31mERROR not found[0m]
+[0m02:04:46.091960 [info ] [MainThread]: Required dependencies:
+[0m02:04:46.092178 [debug] [MainThread]: Executing "git --help"
+[0m02:04:46.105738 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]\n           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]\n           [--super-prefix=<path>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone     Clone a repository into a new directory\n   init      Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add       Add file contents to the index\n   mv        Move or rename a file, a directory, or a symlink\n   restore   Restore working tree files\n   rm        Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect    Use binary search to find the commit that introduced a bug\n   diff      Show changes between commits, commit and working tree, etc\n   grep      Print lines matching a pattern\n   log       Show commit logs\n   show      Show various types of objects\n   status    Show the working tree status\n\ngrow, mark and tweak your common history\n   branch    List, create, or delete branches\n   commit    Record changes to the repository\n   merge     Join two or more development histories together\n   rebase    Reapply commits on top of another base tip\n   reset     Reset current HEAD to the specified state\n   switch    Switch branches\n   tag       Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch     Download objects and refs from another repository\n   pull      Fetch from and integrate with another repository or a local branch\n   push      Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m02:04:46.106359 [debug] [MainThread]: STDERR: "b''"
+[0m02:04:46.106617 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m02:04:46.106845 [info ] [MainThread]: Connection:
+[0m02:04:46.107082 [info ] [MainThread]:   host: adb-2904831403393108.8.azuredatabricks.net
+[0m02:04:46.107277 [info ] [MainThread]:   http_path: sql/protocolv1/o/2904831403393108/0519-112838-epy3ulok
+[0m02:04:46.107465 [info ] [MainThread]:   catalog: hive_metastore
+[0m02:04:46.107656 [info ] [MainThread]:   schema: saleslt
+[0m02:04:46.108025 [info ] [MainThread]: Registered adapter: databricks=1.7.15
+[0m02:04:46.112631 [debug] [MainThread]: Databricks adapter: DatabricksDBTConnection(id=5495362896, session-id=None, name=debug, idle-time=0s, acquire-count=0, language=None, thread-identifier=(63424, 8509787136), compute-name=) - Creating connection
+[0m02:04:46.113090 [debug] [MainThread]: Acquiring new databricks connection 'debug'
+[0m02:04:46.113336 [debug] [MainThread]: Databricks adapter: DatabricksDBTConnection(id=5495362896, session-id=None, name=debug, idle-time=1.6689300537109375e-06s, acquire-count=1, language=None, thread-identifier=(63424, 8509787136), compute-name=) - Acquired connection on thread (63424, 8509787136), using default compute resource
+[0m02:04:46.113579 [debug] [MainThread]: Databricks adapter: DatabricksDBTConnection(id=5495362896, session-id=None, name=debug, idle-time=0.0002627372741699219s, acquire-count=1, language=None, thread-identifier=(63424, 8509787136), compute-name=) - Checking idleness
+[0m02:04:46.113775 [debug] [MainThread]: Databricks adapter: DatabricksDBTConnection(id=5495362896, session-id=None, name=debug, idle-time=0.00046372413635253906s, acquire-count=1, language=None, thread-identifier=(63424, 8509787136), compute-name=) - Retrieving connection
+[0m02:04:46.113974 [debug] [MainThread]: Using databricks connection "debug"
+[0m02:04:46.114158 [debug] [MainThread]: On debug: select 1 as id
+[0m02:04:46.114362 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m02:04:48.381586 [debug] [MainThread]: Databricks adapter: DatabricksDBTConnection(id=5495362896, session-id=None, name=debug, idle-time=2.384185791015625e-05s, acquire-count=0, language=None, thread-identifier=(63424, 8509787136), compute-name=) - Released connection
+[0m02:04:48.382528 [error] [MainThread]: Encountered an error:
+
+[0m02:04:48.413273 [error] [MainThread]: Traceback (most recent call last):
+  File "/Users/ssuphapinyo/Code/Medallion-Spark-Azure-DBT/.venv/lib/python3.9/site-packages/dbt/cli/requires.py", line 91, in wrapper
+    result, success = func(*args, **kwargs)
+  File "/Users/ssuphapinyo/Code/Medallion-Spark-Azure-DBT/.venv/lib/python3.9/site-packages/dbt/cli/requires.py", line 76, in wrapper
+    return func(*args, **kwargs)
+  File "/Users/ssuphapinyo/Code/Medallion-Spark-Azure-DBT/.venv/lib/python3.9/site-packages/dbt/cli/main.py", line 444, in debug
+    results = task.run()
+  File "/Users/ssuphapinyo/Code/Medallion-Spark-Azure-DBT/.venv/lib/python3.9/site-packages/dbt/task/debug.py", line 153, in run
+    connection_status = self.test_connection()
+  File "/Users/ssuphapinyo/Code/Medallion-Spark-Azure-DBT/.venv/lib/python3.9/site-packages/dbt/task/debug.py", line 472, in test_connection
+    connection_result = self.attempt_connection(self.profile)
+  File "/Users/ssuphapinyo/Code/Medallion-Spark-Azure-DBT/.venv/lib/python3.9/site-packages/dbt/task/debug.py", line 450, in attempt_connection
+    adapter.debug_query()
+  File "/Users/ssuphapinyo/Code/Medallion-Spark-Azure-DBT/.venv/lib/python3.9/site-packages/dbt/adapters/spark/impl.py", line 491, in debug_query
+    self.execute("select 1 as id")
+  File "/Users/ssuphapinyo/Code/Medallion-Spark-Azure-DBT/.venv/lib/python3.9/site-packages/dbt/adapters/databricks/utils.py", line 72, in wrapper
+    return func(*new_args, **new_kwargs)
+  File "/Users/ssuphapinyo/Code/Medallion-Spark-Azure-DBT/.venv/lib/python3.9/site-packages/dbt/adapters/databricks/impl.py", line 189, in execute
+    return super().execute(sql=sql, auto_begin=auto_begin, fetch=fetch, limit=limit)
+  File "/Users/ssuphapinyo/Code/Medallion-Spark-Azure-DBT/.venv/lib/python3.9/site-packages/dbt/adapters/base/impl.py", line 310, in execute
+    return self.connections.execute(sql=sql, auto_begin=auto_begin, fetch=fetch, limit=limit)
+  File "/Users/ssuphapinyo/Code/Medallion-Spark-Azure-DBT/.venv/lib/python3.9/site-packages/dbt/adapters/databricks/connections.py", line 1303, in execute
+    _, cursor = self.add_query(sql, auto_begin)
+  File "/Users/ssuphapinyo/Code/Medallion-Spark-Azure-DBT/.venv/lib/python3.9/site-packages/dbt/adapters/databricks/connections.py", line 1274, in add_query
+    cursor = cast(DatabricksSQLConnectionWrapper, connection.handle).cursor()
+  File "/Users/ssuphapinyo/Code/Medallion-Spark-Azure-DBT/.venv/lib/python3.9/site-packages/dbt/contracts/connection.py", line 90, in handle
+    self._handle.resolve(self)
+  File "/Users/ssuphapinyo/Code/Medallion-Spark-Azure-DBT/.venv/lib/python3.9/site-packages/dbt/contracts/connection.py", line 114, in resolve
+    return self.opener(connection)
+  File "/Users/ssuphapinyo/Code/Medallion-Spark-Azure-DBT/.venv/lib/python3.9/site-packages/dbt/adapters/databricks/connections.py", line 1538, in _open2
+    return cls.retry_connection(
+  File "/Users/ssuphapinyo/Code/Medallion-Spark-Azure-DBT/.venv/lib/python3.9/site-packages/dbt/adapters/base/connections.py", line 241, in retry_connection
+    connection.handle = connect()
+  File "/Users/ssuphapinyo/Code/Medallion-Spark-Azure-DBT/.venv/lib/python3.9/site-packages/dbt/adapters/databricks/connections.py", line 1502, in connect
+    conn: DatabricksSQLConnection = dbsql.connect(
+  File "/Users/ssuphapinyo/Code/Medallion-Spark-Azure-DBT/.venv/lib/python3.9/site-packages/databricks/sql/__init__.py", line 82, in connect
+    return Connection(server_hostname, http_path, access_token, **kwargs)
+  File "/Users/ssuphapinyo/Code/Medallion-Spark-Azure-DBT/.venv/lib/python3.9/site-packages/databricks/sql/client.py", line 195, in __init__
+    self._session_handle = self.thrift_backend.open_session(
+  File "/Users/ssuphapinyo/Code/Medallion-Spark-Azure-DBT/.venv/lib/python3.9/site-packages/databricks/sql/thrift_backend.py", line 559, in open_session
+    response = self.make_request(self._client.OpenSession, open_session_req)
+  File "/Users/ssuphapinyo/Code/Medallion-Spark-Azure-DBT/.venv/lib/python3.9/site-packages/databricks/sql/thrift_backend.py", line 488, in make_request
+    self._handle_request_error(error_info, attempt, elapsed)
+  File "/Users/ssuphapinyo/Code/Medallion-Spark-Azure-DBT/.venv/lib/python3.9/site-packages/databricks/sql/thrift_backend.py", line 321, in _handle_request_error
+    time.sleep(error_info.retry_delay)
+KeyboardInterrupt
+
+[0m02:04:48.415321 [debug] [MainThread]: Resource report: {"command_name": "debug", "command_wall_clock_time": 3.0479126, "process_user_time": 2.559263, "process_kernel_time": 1.466751, "process_mem_max_rss": "179617792", "command_success": false, "process_in_blocks": "0", "process_out_blocks": "0"}
+[0m02:04:48.415743 [debug] [MainThread]: Command `dbt debug` failed at 02:04:48.415652 after 3.05 seconds
+[0m02:04:48.415997 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m02:04:48.416238 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x104ab54f0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x147a626d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x147a62790>]}
+[0m02:04:48.416502 [debug] [MainThread]: Flushing usage events
+[0m13:53:07.527817 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106bc94f0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1086a7a90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1086fc970>]}
+
+
+============================== 13:53:07.530467 | 08bfef62-c819-48d7-9c44-86ba8b26f9b9 ==============================
+[0m13:53:07.530467 [info ] [MainThread]: Running with dbt=1.7.14
+[0m13:53:07.530816 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'version_check': 'True', 'profiles_dir': '/Users/ssuphapinyo/.dbt', 'log_path': 'logs', 'fail_fast': 'False', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'introspect': 'True', 'log_format': 'default', 'invocation_command': 'dbt debug --connection', 'target_path': 'None', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m13:53:07.531225 [info ] [MainThread]: dbt version: 1.7.14
+[0m13:53:07.531432 [info ] [MainThread]: python version: 3.9.6
+[0m13:53:07.531622 [info ] [MainThread]: python path: /Users/ssuphapinyo/Code/Medallion-Spark-Azure-DBT/.venv/bin/python
+[0m13:53:07.531812 [info ] [MainThread]: os info: macOS-14.5-arm64-arm-64bit
+[0m13:53:08.157408 [info ] [MainThread]: Using profiles dir at /Users/ssuphapinyo/.dbt
+[0m13:53:08.157734 [info ] [MainThread]: Using profiles.yml file at /Users/ssuphapinyo/.dbt/profiles.yml
+[0m13:53:08.157971 [info ] [MainThread]: Using dbt_project.yml file at /Users/ssuphapinyo/Code/Medallion-Spark-Azure-DBT/dbt_project.yml
+[0m13:53:08.158218 [info ] [MainThread]: adapter type: databricks
+[0m13:53:08.158428 [info ] [MainThread]: adapter version: 1.7.15
+[0m13:53:08.158632 [info ] [MainThread]: Skipping steps before connection verification
+[0m13:53:08.158823 [info ] [MainThread]: Connection:
+[0m13:53:08.159020 [info ] [MainThread]:   host: adb-2904831403393108.8.azuredatabricks.net
+[0m13:53:08.159228 [info ] [MainThread]:   http_path: sql/protocolv1/o/2904831403393108/0519-112838-epy3ulok
+[0m13:53:08.159416 [info ] [MainThread]:   catalog: hive_metastore
+[0m13:53:08.159600 [info ] [MainThread]:   schema: saleslt
+[0m13:53:08.159818 [info ] [MainThread]: Registered adapter: databricks=1.7.15
+[0m13:53:08.164830 [debug] [MainThread]: Databricks adapter: DatabricksDBTConnection(id=5673416064, session-id=None, name=debug, idle-time=0s, acquire-count=0, language=None, thread-identifier=(70963, 8509787136), compute-name=) - Creating connection
+[0m13:53:08.165409 [debug] [MainThread]: Acquiring new databricks connection 'debug'
+[0m13:53:08.165659 [debug] [MainThread]: Databricks adapter: DatabricksDBTConnection(id=5673416064, session-id=None, name=debug, idle-time=2.1457672119140625e-06s, acquire-count=1, language=None, thread-identifier=(70963, 8509787136), compute-name=) - Acquired connection on thread (70963, 8509787136), using default compute resource
+[0m13:53:08.165928 [debug] [MainThread]: Databricks adapter: DatabricksDBTConnection(id=5673416064, session-id=None, name=debug, idle-time=0.00028705596923828125s, acquire-count=1, language=None, thread-identifier=(70963, 8509787136), compute-name=) - Checking idleness
+[0m13:53:08.166140 [debug] [MainThread]: Databricks adapter: DatabricksDBTConnection(id=5673416064, session-id=None, name=debug, idle-time=0.0005040168762207031s, acquire-count=1, language=None, thread-identifier=(70963, 8509787136), compute-name=) - Retrieving connection
+[0m13:53:08.166347 [debug] [MainThread]: Using databricks connection "debug"
+[0m13:53:08.166556 [debug] [MainThread]: On debug: select 1 as id
+[0m13:53:08.166765 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m13:53:15.706867 [debug] [MainThread]: Databricks adapter: DatabricksDBTConnection(id=5673416064, session-id=None, name=debug, idle-time=2.7179718017578125e-05s, acquire-count=0, language=None, thread-identifier=(70963, 8509787136), compute-name=) - Released connection
+[0m13:53:15.708195 [error] [MainThread]: Encountered an error:
+
+[0m13:53:15.752435 [error] [MainThread]: Traceback (most recent call last):
+  File "/Users/ssuphapinyo/Code/Medallion-Spark-Azure-DBT/.venv/lib/python3.9/site-packages/dbt/cli/requires.py", line 91, in wrapper
+    result, success = func(*args, **kwargs)
+  File "/Users/ssuphapinyo/Code/Medallion-Spark-Azure-DBT/.venv/lib/python3.9/site-packages/dbt/cli/requires.py", line 76, in wrapper
+    return func(*args, **kwargs)
+  File "/Users/ssuphapinyo/Code/Medallion-Spark-Azure-DBT/.venv/lib/python3.9/site-packages/dbt/cli/main.py", line 444, in debug
+    results = task.run()
+  File "/Users/ssuphapinyo/Code/Medallion-Spark-Azure-DBT/.venv/lib/python3.9/site-packages/dbt/task/debug.py", line 153, in run
+    connection_status = self.test_connection()
+  File "/Users/ssuphapinyo/Code/Medallion-Spark-Azure-DBT/.venv/lib/python3.9/site-packages/dbt/task/debug.py", line 472, in test_connection
+    connection_result = self.attempt_connection(self.profile)
+  File "/Users/ssuphapinyo/Code/Medallion-Spark-Azure-DBT/.venv/lib/python3.9/site-packages/dbt/task/debug.py", line 450, in attempt_connection
+    adapter.debug_query()
+  File "/Users/ssuphapinyo/Code/Medallion-Spark-Azure-DBT/.venv/lib/python3.9/site-packages/dbt/adapters/spark/impl.py", line 491, in debug_query
+    self.execute("select 1 as id")
+  File "/Users/ssuphapinyo/Code/Medallion-Spark-Azure-DBT/.venv/lib/python3.9/site-packages/dbt/adapters/databricks/utils.py", line 72, in wrapper
+    return func(*new_args, **new_kwargs)
+  File "/Users/ssuphapinyo/Code/Medallion-Spark-Azure-DBT/.venv/lib/python3.9/site-packages/dbt/adapters/databricks/impl.py", line 189, in execute
+    return super().execute(sql=sql, auto_begin=auto_begin, fetch=fetch, limit=limit)
+  File "/Users/ssuphapinyo/Code/Medallion-Spark-Azure-DBT/.venv/lib/python3.9/site-packages/dbt/adapters/base/impl.py", line 310, in execute
+    return self.connections.execute(sql=sql, auto_begin=auto_begin, fetch=fetch, limit=limit)
+  File "/Users/ssuphapinyo/Code/Medallion-Spark-Azure-DBT/.venv/lib/python3.9/site-packages/dbt/adapters/databricks/connections.py", line 1303, in execute
+    _, cursor = self.add_query(sql, auto_begin)
+  File "/Users/ssuphapinyo/Code/Medallion-Spark-Azure-DBT/.venv/lib/python3.9/site-packages/dbt/adapters/databricks/connections.py", line 1274, in add_query
+    cursor = cast(DatabricksSQLConnectionWrapper, connection.handle).cursor()
+  File "/Users/ssuphapinyo/Code/Medallion-Spark-Azure-DBT/.venv/lib/python3.9/site-packages/dbt/contracts/connection.py", line 90, in handle
+    self._handle.resolve(self)
+  File "/Users/ssuphapinyo/Code/Medallion-Spark-Azure-DBT/.venv/lib/python3.9/site-packages/dbt/contracts/connection.py", line 114, in resolve
+    return self.opener(connection)
+  File "/Users/ssuphapinyo/Code/Medallion-Spark-Azure-DBT/.venv/lib/python3.9/site-packages/dbt/adapters/databricks/connections.py", line 1538, in _open2
+    return cls.retry_connection(
+  File "/Users/ssuphapinyo/Code/Medallion-Spark-Azure-DBT/.venv/lib/python3.9/site-packages/dbt/adapters/base/connections.py", line 241, in retry_connection
+    connection.handle = connect()
+  File "/Users/ssuphapinyo/Code/Medallion-Spark-Azure-DBT/.venv/lib/python3.9/site-packages/dbt/adapters/databricks/connections.py", line 1502, in connect
+    conn: DatabricksSQLConnection = dbsql.connect(
+  File "/Users/ssuphapinyo/Code/Medallion-Spark-Azure-DBT/.venv/lib/python3.9/site-packages/databricks/sql/__init__.py", line 82, in connect
+    return Connection(server_hostname, http_path, access_token, **kwargs)
+  File "/Users/ssuphapinyo/Code/Medallion-Spark-Azure-DBT/.venv/lib/python3.9/site-packages/databricks/sql/client.py", line 195, in __init__
+    self._session_handle = self.thrift_backend.open_session(
+  File "/Users/ssuphapinyo/Code/Medallion-Spark-Azure-DBT/.venv/lib/python3.9/site-packages/databricks/sql/thrift_backend.py", line 559, in open_session
+    response = self.make_request(self._client.OpenSession, open_session_req)
+  File "/Users/ssuphapinyo/Code/Medallion-Spark-Azure-DBT/.venv/lib/python3.9/site-packages/databricks/sql/thrift_backend.py", line 488, in make_request
+    self._handle_request_error(error_info, attempt, elapsed)
+  File "/Users/ssuphapinyo/Code/Medallion-Spark-Azure-DBT/.venv/lib/python3.9/site-packages/databricks/sql/thrift_backend.py", line 321, in _handle_request_error
+    time.sleep(error_info.retry_delay)
+KeyboardInterrupt
+
+[0m13:53:15.755061 [debug] [MainThread]: Resource report: {"command_name": "debug", "command_wall_clock_time": 8.261254, "process_user_time": 1.969696, "process_kernel_time": 2.05232, "process_mem_max_rss": "181207040", "command_success": false, "process_in_blocks": "0", "process_out_blocks": "0"}
+[0m13:53:15.755583 [debug] [MainThread]: Command `dbt debug` failed at 13:53:15.755458 after 8.26 seconds
+[0m13:53:15.755886 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m13:53:15.756209 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106bc94f0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x15230e760>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x15235fc40>]}
+[0m13:53:15.756543 [debug] [MainThread]: Flushing usage events
+[0m13:53:20.273378 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x104ce1190>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1067bfa90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106814970>]}
+
+
+============================== 13:53:20.276076 | 61305f17-5081-4648-9417-7e2dcfed9ce2 ==============================
+[0m13:53:20.276076 [info ] [MainThread]: Running with dbt=1.7.14
+[0m13:53:20.276448 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/Users/ssuphapinyo/.dbt', 'debug': 'False', 'version_check': 'True', 'log_path': 'logs', 'warn_error': 'None', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'invocation_command': 'dbt debug --connection', 'static_parser': 'True', 'log_format': 'default', 'target_path': 'None', 'introspect': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m13:53:20.276861 [info ] [MainThread]: dbt version: 1.7.14
+[0m13:53:20.277065 [info ] [MainThread]: python version: 3.9.6
+[0m13:53:20.277254 [info ] [MainThread]: python path: /Users/ssuphapinyo/Code/Medallion-Spark-Azure-DBT/.venv/bin/python
+[0m13:53:20.277442 [info ] [MainThread]: os info: macOS-14.5-arm64-arm-64bit
+[0m13:53:20.927549 [info ] [MainThread]: Using profiles dir at /Users/ssuphapinyo/.dbt
+[0m13:53:20.927881 [info ] [MainThread]: Using profiles.yml file at /Users/ssuphapinyo/.dbt/profiles.yml
+[0m13:53:20.928104 [info ] [MainThread]: Using dbt_project.yml file at /Users/ssuphapinyo/Code/Medallion-Spark-Azure-DBT/dbt_project.yml
+[0m13:53:20.928313 [info ] [MainThread]: adapter type: databricks
+[0m13:53:20.928510 [info ] [MainThread]: adapter version: 1.7.15
+[0m13:53:20.928709 [info ] [MainThread]: Skipping steps before connection verification
+[0m13:53:20.928910 [info ] [MainThread]: Connection:
+[0m13:53:20.929111 [info ] [MainThread]:   host: adb-2904831403393108.8.azuredatabricks.net
+[0m13:53:20.929306 [info ] [MainThread]:   http_path: sql/protocolv1/o/2904831403393108/0519-112838-epy3ulok
+[0m13:53:20.929497 [info ] [MainThread]:   catalog: hive_metastore
+[0m13:53:20.929681 [info ] [MainThread]:   schema: saleslt
+[0m13:53:20.929910 [info ] [MainThread]: Registered adapter: databricks=1.7.15
+[0m13:53:20.935349 [debug] [MainThread]: Databricks adapter: DatabricksDBTConnection(id=5124706608, session-id=None, name=debug, idle-time=0s, acquire-count=0, language=None, thread-identifier=(71030, 8509787136), compute-name=) - Creating connection
+[0m13:53:20.935928 [debug] [MainThread]: Acquiring new databricks connection 'debug'
+[0m13:53:20.936162 [debug] [MainThread]: Databricks adapter: DatabricksDBTConnection(id=5124706608, session-id=None, name=debug, idle-time=9.5367431640625e-07s, acquire-count=1, language=None, thread-identifier=(71030, 8509787136), compute-name=) - Acquired connection on thread (71030, 8509787136), using default compute resource
+[0m13:53:20.936425 [debug] [MainThread]: Databricks adapter: DatabricksDBTConnection(id=5124706608, session-id=None, name=debug, idle-time=0.00027179718017578125s, acquire-count=1, language=None, thread-identifier=(71030, 8509787136), compute-name=) - Checking idleness
+[0m13:53:20.936625 [debug] [MainThread]: Databricks adapter: DatabricksDBTConnection(id=5124706608, session-id=None, name=debug, idle-time=0.000476837158203125s, acquire-count=1, language=None, thread-identifier=(71030, 8509787136), compute-name=) - Retrieving connection
+[0m13:53:20.936824 [debug] [MainThread]: Using databricks connection "debug"
+[0m13:53:20.937015 [debug] [MainThread]: On debug: select 1 as id
+[0m13:53:20.937209 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m13:53:21.275664 [debug] [MainThread]: Databricks adapter: DatabricksDBTConnection(id=5124706608, session-id=5e22d2a5-3fa2-44e8-bf45-e2759f6d1860, name=debug, idle-time=1.4066696166992188e-05s, acquire-count=1, language=None, thread-identifier=(71030, 8509787136), compute-name=) - Connection created
+[0m13:53:21.276987 [debug] [MainThread]: Databricks adapter: Cursor(session-id=5e22d2a5-3fa2-44e8-bf45-e2759f6d1860, command-id=Unknown) - Created cursor
+[0m13:53:30.136546 [debug] [MainThread]: SQL status: OK in 9.199999809265137 seconds
+[0m13:53:30.138369 [debug] [MainThread]: Databricks adapter: Cursor(session-id=5e22d2a5-3fa2-44e8-bf45-e2759f6d1860, command-id=598dd79e-02f9-45fc-a4c4-6e9a99859cee) - Closing cursor
+[0m13:53:30.275368 [debug] [MainThread]: Databricks adapter: DatabricksDBTConnection(id=5124706608, session-id=5e22d2a5-3fa2-44e8-bf45-e2759f6d1860, name=debug, idle-time=1.8835067749023438e-05s, acquire-count=0, language=None, thread-identifier=(71030, 8509787136), compute-name=) - Released connection
+[0m13:53:30.276902 [info ] [MainThread]:   Connection test: [[32mOK connection ok[0m]
+
+[0m13:53:30.277674 [info ] [MainThread]: [31m1 check failed:[0m
+[0m13:53:30.278302 [info ] [MainThread]: Project loading failed for the following reason:
+ project path </Users/ssuphapinyo/Code/Medallion-Spark-Azure-DBT/dbt_project.yml> not found
+
+[0m13:53:30.283398 [debug] [MainThread]: Resource report: {"command_name": "debug", "command_wall_clock_time": 10.055254, "process_user_time": 2.151611, "process_kernel_time": 1.88395, "process_mem_max_rss": "181993472", "command_success": false, "process_in_blocks": "0", "process_out_blocks": "0"}
+[0m13:53:30.284627 [debug] [MainThread]: Command `dbt debug` failed at 13:53:30.284413 after 10.06 seconds
+[0m13:53:30.285256 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m13:53:30.285741 [debug] [MainThread]: On debug: Close
+[0m13:53:30.286245 [debug] [MainThread]: Databricks adapter: Connection(session-id=5e22d2a5-3fa2-44e8-bf45-e2759f6d1860) - Closing connection
+[0m13:53:30.698939 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x104ce1190>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1316eaca0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x13174d130>]}
+[0m13:53:30.702633 [debug] [MainThread]: Flushing usage events
